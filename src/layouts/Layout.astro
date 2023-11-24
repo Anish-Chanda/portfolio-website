@@ -1,0 +1,44 @@
+---
+import Navbar from '../Components/Navbar.astro';
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Astro description" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{title}</title>
+  <style is:global>
+    @font-face {
+      font-family: 'Ink-Free';
+      src: url('/fonts/Inkfree.ttf') format('truetype'); /* Adjust the font path and format */
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap; /* Change to 'swap' for better font loading */
+    }
+
+    /* Rest of your styles */
+    :root {
+      --accent: 136, 58, 234;
+      /* Other variables */
+    }
+    
+    html {
+      font-family: 'Ink-Free', system-ui, sans-serif; /* Apply the custom font */
+      /* Other styles */
+    }
+  </style>
+</head>
+<body>
+  <Navbar />
+  <slot />
+</body>
+</html>
