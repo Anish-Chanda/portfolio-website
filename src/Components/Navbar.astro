@@ -1,0 +1,20 @@
+---
+import GithubIcon from "../../public/icons/github_icon.svg";
+import LinkdinIcon from "../../public/icons/linkdin_icon.svg";
+import { Image } from "astro:assets";
+---
+
+<nav
+  class="bg-[#9A8FDB] lg:py-12 lg:text-2xl text-right lg:px-14 lg:space-x-6 text-white"
+>
+  <!-- Nav bar -->
+  <a href="">Blog</a>
+  <a href="">Contact</a>
+
+  <a href="https://github.com/Anish-Chanda" target="_blank"
+    ><Image src={GithubIcon} alt="Github logo White" class="inline" />
+    <a href="https://www.linkedin.com/in/anish-chanda/" target="_blank"
+      ><Image src={LinkdinIcon} alt="Linkdin icon white" class="inline" /></a
+    >
+  </a>
+</nav>
