@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  date: string;
+}
+
+const { title, description, date } = Astro.props;
+---
+
+<!-- Timeline -->
+<div class="flex place-content-evenly">
+  <div class="inline">
+    <!-- Circle -->
+    <div class="bg-black rounded-full w-5 h-5"></div>
+
+    <!-- Line -->
+    <div class="bg-black h-full w-[3px] ml-2"></div>
+  </div>
+
+  <!-- Texts -->
+  <div class="inline ml-5 lg:pb-8">
+    <div class="flex place-content-between lg:mb-8">
+      <h3 class="inline lg:text-2xl">{title}</h3>
+      <h4 class="inline lg:text-xl">{date}</h4>
+    </div>
+    <p class="lg:text-lg">
+      {description}
+    </p>
+  </div>
+</div>
