@@ -3,11 +3,15 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../Components/Navbar.astro";
 import Hero from "../Sections/Hero.astro";
 import Experiance from "../Sections/Experiance.astro";
+import Projects from "../Sections/Projects";
+import Contact from "../Sections/Contact.astro";
 ---
 
 <Layout title="Welcome to my Website">
   <main>
     <Hero />
     <Experiance />
+    <Projects client:load/>
+    <Contact />
   </main>
 </Layout>
