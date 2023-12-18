@@ -1,0 +1,33 @@
+---
+interface Props {
+  title: string;
+  techStack: string[];
+}
+
+import {Image} from 'astro:assets';
+import Ts from "../../public/icons/ts.png"
+import react from "../../public/icons/react.png";
+import astro from "../../public/icons/astro.svg";
+
+const { title, techStack } = Astro.props;
+---
+
+<div class="w-full h-px bg-white my-1 rounded-full"></div>
+<div    
+  class="rounded-lg bg-white py-3 mx-2 text-xl px-2 my-2 flex place-content-between shadow-lg hover:shadow-2xl"
+>
+  <h3 class="inline">{title}</h3>
+  <div class="inline">
+    {
+      techStack.map((val, index) => {
+        if(val === "ts") {
+             return <span id={val}><Image src={Ts} alt="" height={20} width={20} class="inline px-px"/></span>;
+        } else if( val ==="react") {
+            return <span id={val}><Image src={react} alt="" height={20} width={20} class="inline px-px"/></span>;
+        } else if(val ==="astro") {
+            return <span id={val}><Image src={astro} alt="" height={20} width={20} class="inline px-px"/></span>;
+        }
+      })
+    }
+  </div>
+</div>
