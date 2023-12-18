@@ -1,0 +1,47 @@
+---
+import ContactCard from "../Components/ContactCard.astro";
+---
+
+<section class="bg-[#9AD0C2] p-6">
+  <div class="lg:w-[70%] mx-auto">
+    <h2 class="pb-3 text-3xl">Contact Me</h2>
+    <div class="flex flex-col lg:flex-row">
+      <!-- Adjust flex direction based on screen size -->
+      <form action="" class="mb-4 lg:mb-0 lg:mr-4 lg:w-1/2">
+        <!-- Adjust margin and width for larger screens -->
+        <div class="mb-2">
+          <input
+            type="text"
+            name="Name"
+            id="name"
+            placeholder="Your Name"
+            class="p-3 rounded-2xl w-full"
+          />
+        </div>
+        <div class="mb-2">
+          <input
+            type="email"
+            name="Email"
+            id="email"
+            placeholder="Your Email"
+            class="p-3 rounded-2xl w-full"
+          />
+        </div>
+        <div class="mb-3">
+          <input
+            type="text"
+            name="msg"
+            id="msg"
+            placeholder="Your message"
+            class="p-3 rounded-2xl w-full"
+          />
+        </div>
+        <div>
+          <button class="p-3 rounded-2xl bg-gray-800 text-white">SEND</button>
+        </div>
+      </form>
+
+      <ContactCard />
+    </div>
+  </div>
+</section>
